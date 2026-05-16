@@ -21,5 +21,4 @@ public class ProveedorResponseDTO {
     private String telefono;
 
     private String direccion;
-
 }

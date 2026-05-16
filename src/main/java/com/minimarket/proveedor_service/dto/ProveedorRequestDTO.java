@@ -6,12 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProveedorRequestDTO {
-
 
     @NotBlank(message= "EL RUT ES OBLIGATORIO")
     private String rut;

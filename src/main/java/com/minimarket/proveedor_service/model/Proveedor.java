@@ -32,6 +32,6 @@ public class Proveedor {
     private String direccion;
 
     @Column(nullable = false) // borrado lógico
-    private boolean activo;
+    private boolean activo = true;
 
 }
