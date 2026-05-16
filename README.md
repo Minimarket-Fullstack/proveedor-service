@@ -18,7 +18,7 @@
 ---
 
 ## GET - Buscar por Nombre
-`GET http://localhost:8082/api/v1/proveedores/nombre/Distribuidora`
+`GET http://localhost:8082/api/v1/proveedores/nombre/Distribuidora San Cristóbal`
 
 ---
 

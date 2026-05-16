@@ -29,6 +29,11 @@ public class ProveedorController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/correo/{correo}")
+    public ResponseEntity<ProveedorResponseDTO> obtenerPorEmail(@PathVariable String correo){
+        return proveedorService.obtenerPorCorreo(correo).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+    }
+
     @PostMapping
     public ResponseEntity<ProveedorResponseDTO> crearProveedor(@Valid @RequestBody ProveedorRequestDTO dto) {
         return ResponseEntity.status(201).body(proveedorService.guardar(dto));

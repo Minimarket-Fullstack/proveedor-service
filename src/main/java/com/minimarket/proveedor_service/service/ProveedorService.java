@@ -64,4 +64,8 @@ public class ProveedorService {
     public List<ProveedorResponseDTO> buscarPorNombre(String nombre) {
         return proveedorRepository.findByNombreContainingIgnoreCase(nombre).stream().map(this::mapToDTO).collect(Collectors.toList());
     }
+
+    public Optional<ProveedorResponseDTO> obtenerPorCorreo(String correo){
+        return proveedorRepository.findByEmailContainingIgnoreCase(correo).map(this::mapToDTO);
+    }
 }
