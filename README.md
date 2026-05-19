@@ -1,29 +1,29 @@
 # Pruebas Postman - proveedor-service
 
 ## GET - Listar proveedores
-`GET http://localhost:8082/api/v1/proveedores`
+`GET http://localhost:8085/api/v1/proveedores`
 
 ---
 
 ## GET - Buscar por ID
-`GET http://localhost:8082/api/v1/proveedores/1`
-`GET http://localhost:8082/api/v1/proveedores/5`
+`GET http://localhost:8085/api/v1/proveedores/1`
+`GET http://localhost:8085/api/v1/proveedores/5`
 
 ---
 
 ## GET - Buscar por RUT
-`GET http://localhost:8082/api/v1/proveedores/rut/76543210-1`
-`GET http://localhost:8082/api/v1/proveedores/rut/22334455-6`
+`GET http://localhost:8085/api/v1/proveedores/rut/76543210-1`
+`GET http://localhost:8085/api/v1/proveedores/rut/22334455-6`
 
 ---
 
 ## GET - Buscar por Nombre
-`GET http://localhost:8082/api/v1/proveedores/nombre/Distribuidora San Cristóbal`
+`GET http://localhost:8085/api/v1/proveedores/nombre/Distribuidora San Cristóbal`
 
 ---
 
 ## POST - Crear proveedor
-`POST http://localhost:8082/api/v1/proveedores`
+`POST http://localhost:8085/api/v1/proveedores`
 ```json
 {
     "rut": "99999999-9",
@@ -37,7 +37,7 @@
 ---
 
 ## POST - RUT duplicado
-`POST http://localhost:8082/api/v1/proveedores`
+`POST http://localhost:8085/api/v1/proveedores`
 ```json
 {
     "rut": "76543210-1",
@@ -51,7 +51,7 @@
 ---
 
 ## POST - Campos vacíos (validación)
-`POST http://localhost:8082/api/v1/proveedores`
+`POST http://localhost:8085/api/v1/proveedores`
 ```json
 {
     "rut": "",
@@ -65,7 +65,7 @@
 ---
 
 ## PUT - Actualizar proveedor
-`PUT http://localhost:8082/api/v1/proveedores/1`
+`PUT http://localhost:8085/api/v1/proveedores/1`
 ```json
 {
     "rut": "76543210-1",
@@ -79,14 +79,13 @@
 ---
 
 ## DELETE - Eliminar proveedor (borrado lógico)
-`DELETE http://localhost:8082/api/v1/proveedores/2`
+`DELETE http://localhost:8085/api/v1/proveedores/2`
 
-> El registro no se elimina físicamente de la BD, solo cambia `activo = 0`.
-> Verificar en phpMyAdmin que el campo `activo` cambió a `0`.
+> Revisar si en la bd ocurrió el cambio en la columna ACTIVO = 0.
 
 ---
 
 > Nota
 > ```properties
-> server.port=8082
+> server.port=8085
 > ```

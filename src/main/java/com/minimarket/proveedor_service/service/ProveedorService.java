@@ -58,7 +58,7 @@ public class ProveedorService {
     }
 
     public void eliminarProv(Long id) {
-        Proveedor proveedor = proveedorRepository.findById(id).orElseThrow(() -> new ProveedorNotFoundException(id));
+        Proveedor proveedor = proveedorRepository.findByIdAndActivoTrue(id).orElseThrow(() -> new ProveedorNotFoundException(id));
         if(!proveedor.isActivo()){
             throw new ResponseStatusException(HttpStatus.CONFLICT, "EL PROVEEDOR SE ENCUENTRA ELIMINADO."); // un 409
         }
