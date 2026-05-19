@@ -33,6 +33,8 @@ public class DataInitializer implements CommandLineRunner {
         proveedorRepository.save(new Proveedor(null, "55667788-9", "Panificados San Bernardo Ltda.", "pan@psb.cl",               "+56989012345", "Artesanos 22, San Bernardo",      true));
         proveedorRepository.save(new Proveedor(null, "66778899-0", "Frutas y Verduras El Mercado",   "ventas@elmercado.cl",       "+56990123456", "Camino Rural 55, Buin",           true));
         proveedorRepository.save(new Proveedor(null, "77889900-1", "Importadora Pacífico Sur SpA",   "contacto@pacificosur.cl",   "+56901234567", "Puerto 88, Valparaíso",           false));
+        proveedorRepository.save(new Proveedor(null, "11111111-1", "Distribuidora del Sur",   "sur@gmail.com",   "+56912345678", "Av. Principal 123", true));
+        proveedorRepository.save(new Proveedor(null, "22222222-2", "Distribuidora del Norte",  "norte@gmail.com", "+56987654321", "Calle Secundaria 456", true));
 
         log.info(">>> DataInitializer: Carga finalizada. {} proveedores insertados correctamente.", proveedorRepository.count());
     }

@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String,String>> handleValidationErrors(MethodArgumentNotValidException ex){
         Map<String, String> errores = new LinkedHashMap<>();
         ex.getBindingResult().getFieldErrors().forEach(error -> errores.put(error.getField(),error.getDefaultMessage()));
-        log.warn("[VALIDACIÓN] Petición rechazada. Campos con error: {}", ex.toString());
+        log.warn("[VALIDACIÓN] PETICIÓN RECHAZADA. CAMPOS CON ERROR: {}", ex.toString());
         return ResponseEntity.badRequest().body(errores);
     }
 

@@ -16,7 +16,7 @@ public interface ProveedorRepository extends JpaRepository<Proveedor, Long> {
     Optional<Proveedor> findByRutAndActivoTrue(String rut);
 
     List<Proveedor> findByNombreContainingIgnoreCaseAndActivoTrue(String nombre);
-    //Lista?
+
     List<Proveedor> findByEmailContainingIgnoreCaseAndActivoTrue(String correo);
 
 }
