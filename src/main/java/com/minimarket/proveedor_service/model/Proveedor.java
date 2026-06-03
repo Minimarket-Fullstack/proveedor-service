@@ -31,7 +31,6 @@ public class Proveedor {
     @Column(nullable = false)
     private String direccion;
 
-    @Column(nullable = false)
     private boolean activo = true;
 
 }
